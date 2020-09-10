@@ -1,0 +1,17 @@
+.main {
+    padding: 20px;
+    font-family: Helvetica;
+    text-align: center;
+    background: #70e7cc;
+}
+
+.list {
+    padding: 20px;
+    font-family: Helvetica;
+    text-align: center;
+    background: #acf3ac;
+}
+
+#band a:hover {
+    color: green;
+}

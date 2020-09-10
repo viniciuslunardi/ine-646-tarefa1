@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Página pessoal</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+</head>
+<style type="text/css">
+    .name {
+        text-align: center;
+    }
+
+    #interest {
+        color: blue;
+    }
+
+    .picture p {
+        color: cornflowerblue;
+    }
+
+    #interest a:hover {
+        color: lightseagreen;
+    }
+</style>
+<body>
+<div class="main">
+    <h1 class="name"><b>Nome: </b>Vinicius Araldi Lunardi Farias</h1>
+    <p style="font-size: 20px;"><b>Curso: </b>Sistemas de Informação</p>
+    <p style="font-size: 20px;"><b>E-mail: </b>vinilunardi00@gmail.com</p>
+    <p id="interest" style="font-size: 20px;"><b>Interesses: </b><a href="https://www.youtube.com/watch?v=63alIv2II1M">Sou
+        um grande torcedor do
+        Grêmio Football Porto Alegrense. </a></p>
+    <p id="band" style="font-size: 20px;">Tenho uma banda: <b><a href="https://www.youtube.com/watch?v=VuWu24cX8CY">Budang</a></b>.
+        Gosto muito de musica e se pudesse viveria dela.
+    </p>
+    <p>Ja trabalho na area de desenvolvimento web como estagiário full-stack. Não sei utilizar muito o JS vanilla
+        pois utilizamos um framework de FE la chamado EXTJS. Também trabalho com NodeJS e Typescript pro BE.
+        Acho que seria interessante darmos uma olhada em <a
+                href="https://medium.com/trainingcenter/utilizando-o-fluxo-git-flow-e63d5e0d5e04">git-flow</a>
+        esse semestre, trabalho com esse fluxo no estagio.</p>
+    <div class="picture">
+        <p>Timão</p>
+        <img src="gremiao.jpeg" style="width:200px;height:200px;"> <img src="selfie%20a.jpg"
+                                                                        style="width:200px;height:200px;">
+    </div>
+</div>
+<div class="list">
+    <form id="form">
+        <p><b>Lista de hobbies:</b></p>
+        <label>Hobbie: <input type="text" id="added"></label>
+        <button type="button" onclick="addEl()">Adicionar</button>
+        <br/>
+        <p id="hobbies">
+        <li>Tocar guitarra</li>
+        <li>Ler</li>
+        <li>Ver filmes</li>
+        </p>
+        <script>
+            function addEl() {
+                const li = document.getElementById('hobbies');
+                const added = document.getElementById('added').value;
+
+                if (added && added.length) {
+                    const obj = document.createElement('li');
+                    obj.textContent = added;
+                    li.appendChild(obj);
+                    document.getElementById('added').value = "";
+                }
+            }
+        </script>
+
+        <p><b>Lista de Dúvidas:</b></p>
+        <label>Dúvida: <input type="text" id="question"></label>
+        <button type="button" onclick="addDuvida()">Adicionar</button>
+        <br/>
+        <p id="duvidas">
+        <li>Separar o arquivo de JS do HTML (nao consegui aqui kkkk)</li>
+        <li>Mais dúvidas surgirão ao longo do semestre</li>
+        </p>
+        <script>
+            function addDuvida() {
+                const li = document.getElementById('duvidas');
+                const added = document.getElementById('question').value;
+
+                if (added && added.length) {
+                    const obj = document.createElement('li');
+                    obj.textContent = added;
+                    li.appendChild(obj);
+                    document.getElementById('question').value = "";
+                }
+            }
+        </script>
+    </form>
+</div>
+</body>
+</html>
